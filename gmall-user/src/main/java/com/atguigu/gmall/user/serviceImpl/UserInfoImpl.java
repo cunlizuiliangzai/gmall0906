@@ -1,12 +1,13 @@
 package com.atguigu.gmall.user.serviceImpl;
 
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.atguigu.gmall.bean.UserAddress;
 import com.atguigu.gmall.bean.UserInfo;
 import com.atguigu.gmall.user.mapper.UserInfoMapper;
 import com.atguigu.gmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class UserInfoImpl implements UserService {
 
     @Override
     public void addUser(UserInfo userInfo) {
+
         userInfoMapper.insert(userInfo);
     }
 
