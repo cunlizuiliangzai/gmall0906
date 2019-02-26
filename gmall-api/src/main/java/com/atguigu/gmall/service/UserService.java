@@ -19,4 +19,8 @@ public interface UserService {
 
     public UserInfo verify(String userId);
 
+
+    void addUserCache(UserInfo userLogin);
+
+    UserAddress getAddressById(String addressId);
 }

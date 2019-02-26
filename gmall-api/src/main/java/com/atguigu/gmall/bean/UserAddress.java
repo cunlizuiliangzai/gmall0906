@@ -1,25 +1,27 @@
 package com.atguigu.gmall.bean;
 
-public class UserAddress {
+import javax.persistence.Column;
+import javax.persistence.Id;
+import java.io.Serializable;
 
-    String id;
-    String userAddress;
-    String userId;
-    String consignee;
-    String phoneNum;
-    Boolean isDefault;
-
-    public UserAddress() {
-    }
-
-    public UserAddress(String id, String userAddress, String userId, String consignee, String phoneNum, Boolean isDefault) {
-        this.id = id;
-        this.userAddress = userAddress;
-        this.userId = userId;
-        this.consignee = consignee;
-        this.phoneNum = phoneNum;
-        this.isDefault = isDefault;
-    }
+/**
+ * @param
+ * @return
+ */
+public class UserAddress implements Serializable {
+    @Column
+    @Id
+    private String id;
+    @Column
+    private String userAddress;
+    @Column
+    private String userId;
+    @Column
+    private String consignee;
+    @Column
+    private String phoneNum;
+    @Column
+    private String isDefault;
 
     public String getId() {
         return id;
@@ -61,11 +63,11 @@ public class UserAddress {
         this.phoneNum = phoneNum;
     }
 
-    public Boolean getDefault() {
+    public String getIsDefault() {
         return isDefault;
     }
 
-    public void setDefault(Boolean aDefault) {
-        isDefault = aDefault;
+    public void setIsDefault(String isDefault) {
+        this.isDefault = isDefault;
     }
 }

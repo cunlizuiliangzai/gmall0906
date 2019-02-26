@@ -1,32 +1,34 @@
 package com.atguigu.gmall.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.io.Serializable;
 
-public class UserInfo implements Serializable{
-    String id;
-    String loginName;
-    String nickName;
-    String passwd;
-    String name;
-    String phoneNum;
-    String email;
-    String headImg;
-    String userLevel;
-
-    public UserInfo() {
-    }
-
-    public UserInfo(String id, String loginName, String nickName, String passwd, String name, String phoneNum, String email, String headImg, String userLevel) {
-        this.id = id;
-        this.loginName = loginName;
-        this.nickName = nickName;
-        this.passwd = passwd;
-        this.name = name;
-        this.phoneNum = phoneNum;
-        this.email = email;
-        this.headImg = headImg;
-        this.userLevel = userLevel;
-    }
+/**
+ * @param
+ * @return
+ */
+   public class UserInfo implements Serializable {
+        @Id
+        @Column
+        private String id;
+        @Column
+        private String loginName;
+        @Column
+        private String nickName;
+        @Column
+        private String passwd;
+        @Column
+        private String name;
+        @Column
+        private String phoneNum;
+        @Column
+        private String email;
+        @Column
+        private String headImg;
+        @Column
+        private String userLevel;
 
     public String getId() {
         return id;
@@ -98,20 +100,5 @@ public class UserInfo implements Serializable{
 
     public void setUserLevel(String userLevel) {
         this.userLevel = userLevel;
-    }
-
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "id='" + id + '\'' +
-                ", loginName='" + loginName + '\'' +
-                ", nickName='" + nickName + '\'' +
-                ", passwd='" + passwd + '\'' +
-                ", name='" + name + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
-                ", email='" + email + '\'' +
-                ", headImg='" + headImg + '\'' +
-                ", userLevel='" + userLevel + '\'' +
-                '}';
     }
 }
